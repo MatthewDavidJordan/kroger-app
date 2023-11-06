@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>My Website</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="functions/updateAccessToken.js"></script>
+  <script src="functions/getLocationId.js"></script>
+  <script src="functions/locateStore.js"></script>
+  <script src="functions/getProductId.js"></script>
+  <script src="functions/productSearch.js"></script>
+</head>
+
+<body>
+  <h1>LRB X KROGER</h1>
+  <h2>Find a Grocery Store</h2>
+  <form id="storeLocatorForm">
+    <label for="storeName">Grocery Store Chain: *<br> Example: Kroger <br> </label>
+    <input type="text" id="storeName" name="storeName" required><br><br>
+
+    <label for="zipcode">ZIP Code: *<br> For Polk use: 77023 <br></label>
+    <input type="text" id="zipcode" name="zipcode" required><br><br>
+
+    <input type="button" value="Find Store" onclick="locateStore()">
+  </form>
+
+  <div id="storeInfo">
+    <!-- Store information will be displayed here -->
+  </div>
+  <div id="storeNameDisplay">
+    <!-- Store Name will be displayed here -->
+  </div>
+
+  <h2>Search for Products</h2>
+  <form id="productSearchForm">
+    <label for="brand">Brand: <br> Example: Kroger <br></label>
+    <input type="text" id="brand" name="brand" required><br><br>
+
+    <label for="product">Product: *<br> Example: milk <br></label>
+    <input type="text" id="product" name="product" required><br><br>
+
+    <input type="button" value="Search" onclick="productSearch()">
+
+  </form>
+
+  <div id="productSearchInfo"></div>
+  <div id="productSearchResults"></div>
+
+  <h2>Seach for a Specific Product</h2>
+
+  <script src="index.js"></script>
+
+</body>
+
+
+
+
+</html>
