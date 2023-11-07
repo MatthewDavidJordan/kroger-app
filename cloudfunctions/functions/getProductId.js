@@ -21,7 +21,6 @@ async function getProductId(filterBrand, filterTerm, locationId, access_token) {
         $.ajax(settings)
             .done((response) => {
                 console.log(response);
-                document.getElementById("productSearchResults").textContent = response;
                 resolve({ resultingJSON: response });
             })
             .fail((error) => {
